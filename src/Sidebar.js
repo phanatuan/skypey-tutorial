@@ -1,12 +1,17 @@
-import React from 'react'
-import './Sidebar.css';
+import React from "react";
+import ContactList from "./ContactList";
+import "./Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({ contacts, messages, setActiveUserId }) => {
   return (
     <aside className='Sidebar'>
-      Sidebar
+      <ContactList
+        contacts={contacts}
+        messages={messages}
+        setActiveUserId={setActiveUserId}
+      />
     </aside>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
